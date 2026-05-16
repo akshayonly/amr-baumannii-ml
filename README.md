@@ -65,11 +65,10 @@ SHAP Feature Importance
 │   ├── tuning/
 │   │   ├── test_set_results.csv          # Final test set metrics
 │   │   └── cv_search_results.csv         # Full RandomizedSearch CV log
-│   └── shap/
+│   └── shap/                             # SHAP bar, beeswarm, waterfall plots
 │       ├── imipenem_shap_importance.csv  # Ranked genes — imipenem
 │       └── meropenem_shap_importance.csv # Ranked genes — meropenem
 │
-├── figures/                              # SHAP bar, beeswarm, waterfall plots
 ├── requirements.txt
 └── README.md
 ```
