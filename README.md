@@ -49,13 +49,15 @@ SHAP Feature Importance
 ## Repository Structure
 
 ```
+├── notebooks/
+│   ├── 01_data_preparation.ipynb         # Initial EDA and genomes selection
+│   ├── 02_amr_gene_modeling.ipynb        # Baseline modelling
 ├── scripts/
 │   ├── 00_install_bvbrc.sh               # Install BV-BRC CLI
 │   ├── 01_download_bvbrc_genomes.py      # Download genomes from BV-BRC
 │   ├── 02_run_amrfinder.py               # Run AMRFinderPlus
 │   ├── 03_build_kmer_matrix.py           # Build k-mer matrix
 │   ├── 04_build_amr_gene_matrix.py       # Build gene presence/absence matrix
-│   ├── 05_baseline_modelling.py          # Baseline model evaluation
 │   ├── 06_hyperparameter_tuning.py       # Hyperparameter tuning (RF, LR)
 │   └── 07_shap_feature_importance.py     # SHAP analysis
 ├── data/genome_ids.txt                   # Genome fasta files used
@@ -106,7 +108,7 @@ python scripts/02_run_amrfinder.py --genome-dir data/genomes --out-dir data/amrf
 python scripts/04_build_amr_gene_matrix.py --amrfinder-dir data/amrfinder --out-dir data/
 
 # 5. Baseline modelling
-python scripts/05_baseline_modelling.py --modelling-data modelling_data.csv --gene-matrix amr_gene_matrix.csv
+02_amr_gene_modeling.ipynb
 
 # 6. Hyperparameter tuning
 python scripts/06_hyperparameter_tuning.py --modelling-data modelling_data.csv --gene-matrix amr_gene_matrix.csv --out-dir results/tuning
