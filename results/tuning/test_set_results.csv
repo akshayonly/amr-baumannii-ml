@@ -1,0 +1,5 @@
+Antibiotic,Model,Best CV AUC,AUC,F1,Recall,Precision,Accuracy,MCC,Search Time
+imipenem,Random Forest,0.9719,0.93,0.7931,0.7419,0.8519,0.8667,0.699,40.9
+imipenem,Logistic Regression,0.9427,0.9292,0.8485,0.9032,0.8,0.8889,0.7648,10.2
+meropenem,Random Forest,0.9507,0.8876,0.913,0.9545,0.875,0.9024,0.8064,38.6
+meropenem,Logistic Regression,0.9396,0.8768,0.8889,0.9091,0.8696,0.878,0.7548,3.8

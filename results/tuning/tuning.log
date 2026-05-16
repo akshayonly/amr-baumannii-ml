@@ -1,0 +1,184 @@
+2026-05-13 11:34:39,832 [INFO] Output directory : results/tuning
+2026-05-13 11:34:39,832 [INFO] n_jobs           : 30  (of 32 cores)
+2026-05-13 11:34:39,832 [INFO] RF iterations    : 100
+2026-05-13 11:34:39,832 [INFO] LR iterations    : 80
+2026-05-13 11:34:39,832 [INFO] 
+============================================================
+2026-05-13 11:34:39,832 [INFO]   ANTIBIOTIC: IMIPENEM
+2026-05-13 11:34:39,832 [INFO] ============================================================
+2026-05-13 11:34:39,832 [INFO] Loading data for imipenem ...
+2026-05-13 11:37:38,611 [INFO] Output directory : results/tuning
+2026-05-13 11:37:38,611 [INFO] n_jobs           : 30  (of 32 cores)
+2026-05-13 11:37:38,611 [INFO] RF iterations    : 100
+2026-05-13 11:37:38,611 [INFO] LR iterations    : 80
+2026-05-13 11:37:38,611 [INFO] 
+============================================================
+2026-05-13 11:37:38,611 [INFO]   ANTIBIOTIC: IMIPENEM
+2026-05-13 11:37:38,612 [INFO] ============================================================
+2026-05-13 11:37:38,612 [INFO] Loading data for imipenem ...
+2026-05-13 11:37:38,677 [INFO]   Merged samples : 446
+2026-05-13 11:37:38,678 [INFO]   Non-Susceptible: 153  |  Susceptible: 293
+2026-05-13 11:37:38,678 [INFO]   Gene features  : 191
+2026-05-13 11:37:38,680 [INFO]   Train : n=356  (NS=122, S=234)
+2026-05-13 11:37:38,681 [INFO]   Test  : n=90   (NS=31, S=59)
+2026-05-13 11:37:38,681 [INFO]   Feature selection: CHI2 top 100 genes (inside CV pipeline)
+2026-05-13 11:37:38,684 [INFO] 
+  ── Random Forest  (100 random search iterations) ──
+2026-05-13 11:38:19,572 [INFO]     Search complete in 40.9s
+2026-05-13 11:38:19,572 [INFO]     Best CV AUC : 0.9719
+2026-05-13 11:38:19,572 [INFO]     Best params :
+2026-05-13 11:38:19,572 [INFO]       clf__bootstrap: False
+2026-05-13 11:38:19,572 [INFO]       clf__class_weight: balanced_subsample
+2026-05-13 11:38:19,573 [INFO]       clf__max_depth: 10
+2026-05-13 11:38:19,573 [INFO]       clf__max_features: 0.3
+2026-05-13 11:38:19,573 [INFO]       clf__min_samples_leaf: 2
+2026-05-13 11:38:19,573 [INFO]       clf__min_samples_split: 9
+2026-05-13 11:38:19,573 [INFO]       clf__n_estimators: 1028
+2026-05-13 11:38:19,763 [INFO] 
+  ── imipenem | Random Forest — TEST SET RESULTS ──────────────────────
+2026-05-13 11:38:19,764 [INFO]     AUC         : 0.93
+2026-05-13 11:38:19,764 [INFO]     F1          : 0.7931
+2026-05-13 11:38:19,764 [INFO]     Recall      : 0.7419
+2026-05-13 11:38:19,764 [INFO]     Precision   : 0.8519
+2026-05-13 11:38:19,764 [INFO]     Accuracy    : 0.8667
+2026-05-13 11:38:19,764 [INFO]     MCC         : 0.699
+2026-05-13 11:38:19,764 [INFO] 
+  Confusion Matrix (rows=actual, cols=predicted):
+2026-05-13 11:38:19,765 [INFO]     TN=55  FP=4
+2026-05-13 11:38:19,765 [INFO]     FN=8  TP=23
+2026-05-13 11:38:19,769 [INFO] 
+                 precision    recall  f1-score   support
+
+    Susceptible       0.87      0.93      0.90        59
+Non-Susceptible       0.85      0.74      0.79        31
+
+       accuracy                           0.87        90
+      macro avg       0.86      0.84      0.85        90
+   weighted avg       0.87      0.87      0.86        90
+
+2026-05-13 11:38:19,770 [INFO] 
+  ── Logistic Regression  (80 random search iterations) ──
+2026-05-13 11:38:29,989 [INFO]     Search complete in 10.2s
+2026-05-13 11:38:29,990 [INFO]     Best CV AUC : 0.9427
+2026-05-13 11:38:29,990 [INFO]     Best params :
+2026-05-13 11:38:29,990 [INFO]       clf__C: 0.039054412752107935
+2026-05-13 11:38:29,990 [INFO]       clf__class_weight: balanced
+2026-05-13 11:38:29,990 [INFO]       clf__l1_ratio: 0.2912291401980419
+2026-05-13 11:38:29,990 [INFO]       clf__max_iter: 2000
+2026-05-13 11:38:29,990 [INFO]       clf__penalty: elasticnet
+2026-05-13 11:38:29,990 [INFO]       clf__solver: saga
+2026-05-13 11:38:30,000 [INFO] 
+  ── imipenem | Logistic Regression — TEST SET RESULTS ──────────────────────
+2026-05-13 11:38:30,000 [INFO]     AUC         : 0.9292
+2026-05-13 11:38:30,000 [INFO]     F1          : 0.8485
+2026-05-13 11:38:30,000 [INFO]     Recall      : 0.9032
+2026-05-13 11:38:30,000 [INFO]     Precision   : 0.8
+2026-05-13 11:38:30,000 [INFO]     Accuracy    : 0.8889
+2026-05-13 11:38:30,000 [INFO]     MCC         : 0.7648
+2026-05-13 11:38:30,000 [INFO] 
+  Confusion Matrix (rows=actual, cols=predicted):
+2026-05-13 11:38:30,001 [INFO]     TN=52  FP=7
+2026-05-13 11:38:30,001 [INFO]     FN=3  TP=28
+2026-05-13 11:38:30,006 [INFO] 
+                 precision    recall  f1-score   support
+
+    Susceptible       0.95      0.88      0.91        59
+Non-Susceptible       0.80      0.90      0.85        31
+
+       accuracy                           0.89        90
+      macro avg       0.87      0.89      0.88        90
+   weighted avg       0.90      0.89      0.89        90
+
+2026-05-13 11:38:30,006 [INFO] 
+  ★ Best model for IMIPENEM: Random Forest  (Test AUC=0.93)
+2026-05-13 11:38:30,006 [INFO] 
+============================================================
+2026-05-13 11:38:30,006 [INFO]   ANTIBIOTIC: MEROPENEM
+2026-05-13 11:38:30,006 [INFO] ============================================================
+2026-05-13 11:38:30,006 [INFO] Loading data for meropenem ...
+2026-05-13 11:38:30,041 [INFO]   Merged samples : 205
+2026-05-13 11:38:30,041 [INFO]   Non-Susceptible: 109  |  Susceptible: 96
+2026-05-13 11:38:30,041 [INFO]   Gene features  : 191
+2026-05-13 11:38:30,042 [INFO]   Train : n=164  (NS=87, S=77)
+2026-05-13 11:38:30,042 [INFO]   Test  : n=41   (NS=22, S=19)
+2026-05-13 11:38:30,042 [INFO]   Feature selection: RFE top 50 genes (inside CV pipeline)
+2026-05-13 11:38:30,046 [INFO] 
+  ── Random Forest  (100 random search iterations) ──
+2026-05-13 11:39:08,670 [INFO]     Search complete in 38.6s
+2026-05-13 11:39:08,670 [INFO]     Best CV AUC : 0.9507
+2026-05-13 11:39:08,670 [INFO]     Best params :
+2026-05-13 11:39:08,671 [INFO]       clf__bootstrap: False
+2026-05-13 11:39:08,671 [INFO]       clf__class_weight: balanced
+2026-05-13 11:39:08,671 [INFO]       clf__max_depth: 15
+2026-05-13 11:39:08,671 [INFO]       clf__max_features: 0.5
+2026-05-13 11:39:08,671 [INFO]       clf__min_samples_leaf: 1
+2026-05-13 11:39:08,671 [INFO]       clf__min_samples_split: 3
+2026-05-13 11:39:08,671 [INFO]       clf__n_estimators: 1096
+2026-05-13 11:39:08,842 [INFO] 
+  ── meropenem | Random Forest — TEST SET RESULTS ──────────────────────
+2026-05-13 11:39:08,843 [INFO]     AUC         : 0.8876
+2026-05-13 11:39:08,843 [INFO]     F1          : 0.913
+2026-05-13 11:39:08,843 [INFO]     Recall      : 0.9545
+2026-05-13 11:39:08,843 [INFO]     Precision   : 0.875
+2026-05-13 11:39:08,843 [INFO]     Accuracy    : 0.9024
+2026-05-13 11:39:08,843 [INFO]     MCC         : 0.8064
+2026-05-13 11:39:08,843 [INFO] 
+  Confusion Matrix (rows=actual, cols=predicted):
+2026-05-13 11:39:08,844 [INFO]     TN=16  FP=3
+2026-05-13 11:39:08,844 [INFO]     FN=1  TP=21
+2026-05-13 11:39:08,849 [INFO] 
+                 precision    recall  f1-score   support
+
+    Susceptible       0.94      0.84      0.89        19
+Non-Susceptible       0.88      0.95      0.91        22
+
+       accuracy                           0.90        41
+      macro avg       0.91      0.90      0.90        41
+   weighted avg       0.91      0.90      0.90        41
+
+2026-05-13 11:39:08,849 [INFO] 
+  ── Logistic Regression  (80 random search iterations) ──
+2026-05-13 11:39:12,680 [INFO]     Search complete in 3.8s
+2026-05-13 11:39:12,680 [INFO]     Best CV AUC : 0.9396
+2026-05-13 11:39:12,680 [INFO]     Best params :
+2026-05-13 11:39:12,680 [INFO]       clf__C: 4.224770089026369
+2026-05-13 11:39:12,680 [INFO]       clf__class_weight: balanced
+2026-05-13 11:39:12,680 [INFO]       clf__l1_ratio: 0.49379559636439074
+2026-05-13 11:39:12,680 [INFO]       clf__max_iter: 2000
+2026-05-13 11:39:12,680 [INFO]       clf__penalty: l1
+2026-05-13 11:39:12,681 [INFO]       clf__solver: saga
+2026-05-13 11:39:12,688 [INFO] 
+  ── meropenem | Logistic Regression — TEST SET RESULTS ──────────────────────
+2026-05-13 11:39:12,688 [INFO]     AUC         : 0.8768
+2026-05-13 11:39:12,688 [INFO]     F1          : 0.8889
+2026-05-13 11:39:12,688 [INFO]     Recall      : 0.9091
+2026-05-13 11:39:12,688 [INFO]     Precision   : 0.8696
+2026-05-13 11:39:12,688 [INFO]     Accuracy    : 0.878
+2026-05-13 11:39:12,688 [INFO]     MCC         : 0.7548
+2026-05-13 11:39:12,688 [INFO] 
+  Confusion Matrix (rows=actual, cols=predicted):
+2026-05-13 11:39:12,689 [INFO]     TN=16  FP=3
+2026-05-13 11:39:12,689 [INFO]     FN=2  TP=20
+2026-05-13 11:39:12,693 [INFO] 
+                 precision    recall  f1-score   support
+
+    Susceptible       0.89      0.84      0.86        19
+Non-Susceptible       0.87      0.91      0.89        22
+
+       accuracy                           0.88        41
+      macro avg       0.88      0.88      0.88        41
+   weighted avg       0.88      0.88      0.88        41
+
+2026-05-13 11:39:12,693 [INFO] 
+  ★ Best model for MEROPENEM: Random Forest  (Test AUC=0.8876)
+2026-05-13 11:39:12,698 [INFO] 
+Test results saved : results/tuning/test_set_results.csv
+2026-05-13 11:39:12,709 [INFO] CV search results  : results/tuning/cv_search_results.csv
+2026-05-13 11:39:12,709 [INFO] 
+
+── FINAL SUMMARY ────────────────────────────────────────────────
+2026-05-13 11:39:12,712 [INFO] Antibiotic               Model  Best CV AUC    AUC     F1  Recall    MCC
+  imipenem       Random Forest       0.9719 0.9300 0.7931  0.7419 0.6990
+  imipenem Logistic Regression       0.9427 0.9292 0.8485  0.9032 0.7648
+ meropenem       Random Forest       0.9507 0.8876 0.9130  0.9545 0.8064
+ meropenem Logistic Regression       0.9396 0.8768 0.8889  0.9091 0.7548
