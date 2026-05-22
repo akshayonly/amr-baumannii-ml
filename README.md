@@ -122,7 +122,7 @@ python scripts/07_shap_feature_importance.py --modelling-data modelling_data.csv
 
 Genomes were downloaded from [BV-BRC](https://www.bv-brc.org/) filtering for *Acinetobacter baumannii* with associated MIC phenotype data. Of 579 genomes attempted, **547 were successfully downloaded** and used in analysis. Genome IDs are provided in `data/genome_ids.txt` for full reproducibility.
 
-Phenotype labels (Susceptible / Non-Susceptible) were derived from BV-BRC MIC measurements using EUCAST clinical breakpoints.
+Phenotype labels (Susceptible / Non-Susceptible) were derived from BV-BRC MIC measurements using CLSI/EUCAST clinical breakpoints.
 
 ---
 
